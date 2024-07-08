@@ -1,6 +1,6 @@
 import CreateRecordUseCase from "../app/useCases/createRecord/CreateRecordUseCase";
 import SetIncrementIdUseCase from "../app/useCases/setIncrementId/SetIncrementIdUseCase";
-import FirebaseRecordRepository from "../infra/firebase/FirebaseRecordRepository";
+import FirebaseRecordRepository from "../infra/RecordRepository/FirebaseRecordRepository";
 
 const recordRepository = new FirebaseRecordRepository();
 
