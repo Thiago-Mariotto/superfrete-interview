@@ -7,9 +7,9 @@ admin.initializeApp();
 export default class FirebaseRecordRepository implements IRecordRepository {
   private db = admin.firestore();
 
-  async save(record: Omit<Record, 'id' | 'increment_id'>): Promise<Record> {
+  async save(record: Omit<Record, 'id'>): Promise<Record> {
     const newRecord = await this.db.collection('records').add(record);
-    return new Record(newRecord.id, record.name, null);
+    return Record.create(newRecord.id, record.name);
   }
 
   async findRecordById(id: string): Promise<Record | null> {
@@ -17,7 +17,7 @@ export default class FirebaseRecordRepository implements IRecordRepository {
     const data = record.data();
     if (!record.exists || !data) return null;
 
-    return new Record(record.id, data.name, data.increment_id);
+    return Record.create(record.id, data.name);
   }
 
   async getLastIncrementId(): Promise<number> {
