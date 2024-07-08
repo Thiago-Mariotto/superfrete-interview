@@ -6,7 +6,7 @@
   "keywords": [],
   "author": "",
   "scripts": {
-    "install-all": "npm install && cd functions && npm install && npm run buld",
+    "install-all": "npm install && cd functions && npm install && npm run build",
     "start:emulators": "node_env=development firebase emulators:start --only functions,firestore"
   },
   "license": "ISC",
