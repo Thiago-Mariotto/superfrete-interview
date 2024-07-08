@@ -21,7 +21,7 @@ export default class CreateRecordController implements IFirebaseController {
       const record = await this._createRecordUseCase.execute(req.body);
       res.status(201).json(record);
     } catch (err) {
-      console.error('Error setting increment_id:', err);
+      res.status(500).json({ error: 'Internal server error' });
     }
   }
 }
