@@ -7,7 +7,9 @@
   "author": "",
   "scripts": {
     "install-all": "npm install && cd functions && npm install && npm run build",
-    "start:emulators": "node_env=development firebase emulators:start --only functions,firestore"
+    "start:emulators": "firebase emulators:start --only functions,firestore",
+    "test:integration": "cd functions && npm run test:integration",
+    "test:unit": "cd functions && npm run test:unit"
   },
   "license": "ISC",
   "dependencies": {
