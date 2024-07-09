@@ -59,7 +59,7 @@ $ yarn start:emulators ou npm run start:emulators
 
 Para criar um registro, utilize o endpoint abaixo:
 
-- [POST] http://localhost:5001/superfrete-interview/us-central1/createRecord
+- [POST] http://localhost:5001/{project_id}/us-central1/createOrder
 
 ```json
 {
@@ -67,7 +67,7 @@ Para criar um registro, utilize o endpoint abaixo:
 }
 ```
 
-Ao finalizar um registro, o firebase irá atualizar o registro com o increment_id. Você pode verificar o increment_id no diretamente na UI do firestore. Acesse http://127.0.0.1:4000/firestore/default/data
+Ao finalizar um registro, o firebase irá atualizar o registro com o increment_id. Você pode verificar o increment_id diretamente na UI do firestore. Acesse http://127.0.0.1:4000/firestore/default/data
 
 ## :white_check_mark: Testes ##
 
