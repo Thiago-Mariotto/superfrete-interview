@@ -5,7 +5,7 @@ import IRecordRepository from "../../domain/repositories/IRecordRepository";
 import MemoryRecordRepository from "../../infra/RecordRepository/MemoryRecordRepository";
 import { SetIncrementIdTrigger } from "./SetIncrementIdTrigger";
 
-describe.only('# Unit - SetIncrementIdTrigger', function () {
+describe('# Unit - SetIncrementIdTrigger', function () {
 	let setIncrementIdUseCase: SetIncrementIdUseCase;
 	let setIncrementIdTrigger: SetIncrementIdTrigger;
 	let orderRepository: IRecordRepository;

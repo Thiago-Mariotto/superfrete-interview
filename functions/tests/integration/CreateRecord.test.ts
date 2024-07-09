@@ -11,7 +11,7 @@ describe('# Integration - POST /createRecord', () => {
     sinon.restore();
   });
 
-  it.only('should create a new record', async () => {
+  it('should create a new record', async () => {
     const record = {
       name: 'Test Record'
     };
