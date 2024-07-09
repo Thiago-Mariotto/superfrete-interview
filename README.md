@@ -75,7 +75,7 @@ Ao finalizar um registro, o firebase irá atualizar o registro com o increment_i
 # Para rodar os testes unitários. Os testes unitários também possuem cobertura de código
 $ yarn test:unit ou npm test:unit
 
-# Para rodar os testes de integração
+# Para rodar os testes de integração é necessário que a aplicação esteja rodando no emulador do firebase. 
 $ yarn test:integration ou npm run test:integration
 ```
 
